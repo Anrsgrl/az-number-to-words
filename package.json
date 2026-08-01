@@ -1,0 +1,39 @@
+{
+  "name": "az-number-to-words",
+  "version": "0.1.0",
+  "description": "Convert numbers to Azerbaijani words, with manat/qəpik currency support",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "azerbaijani",
+    "azerbaijan",
+    "manat",
+    "azn",
+    "number-to-words",
+    "num2words",
+    "i18n"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anrsgrl/az-number-to-words.git"
+  }
+}
